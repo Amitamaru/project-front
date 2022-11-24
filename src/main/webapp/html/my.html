@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>RPG admin panel</h1>
-<table id="adminPanel">
+<table id="admin_panel">
     <tr>
         <th>#</th>
         <th>Name</th>
@@ -20,7 +20,14 @@
 </table>
 
 <script>
+    function showInfo() {
+        $.get("/rest/players", function (response) {
+            $.each(response, function (i, item){
+                $ ("<tr>").html(<td>+ item.id +</td>)
+            })
+        })
 
+    }
 </script>
 </body>
 </html>
