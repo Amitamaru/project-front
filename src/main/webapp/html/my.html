@@ -4,7 +4,7 @@
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
     <link href="/css/my.css" rel="stylesheet">
 </head>
-<body>
+<body onload="showInfo()">
 <h1>RPG admin panel</h1>
 <table id="admin_panel">
     <tr>
@@ -23,9 +23,18 @@
     function showInfo() {
         $.get("/rest/players", function (response) {
             $.each(response, function (i, item){
-                $ ("<tr>").html(<td>+ item.id +</td>)
-            })
-        })
+                $("<tr>").html("<td>"
+                    + item.id + "</td><td>"
+                    + item.name +"</td><td>"
+                    + item.title + "</td><td>"
+                    + item.race + "</td><td>"
+                    + item.profession + "</td><td>"
+                    + item.level + "</td><td>"
+                    + item.birthday+ "</td><td>"
+                    + item.banned + "</td>>"
+                ).append("admin_panel");
+            });
+        });
 
     }
 </script>
