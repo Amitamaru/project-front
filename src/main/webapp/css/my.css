@@ -1,4 +1,55 @@
+body {
+    font-family: Arial, serif;
+    background-image: linear-gradient(lightgray, white);
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    text-align: center;
+}
+
 th, td {
-    border: 2px solid darkgrey;
-    padding: 3px;
+    border: 2px solid black;
+    padding: 1px;
+    text-align: center;
+}
+
+#admin_panel {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+}
+
+label {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    padding: 5px;
+}
+
+#create {
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#page_button {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#save_btn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    padding: 4px;
+    font-size: 16px;
+    background-color: lightgray;
+}
+#btn {
+    text-align: center;
 }
